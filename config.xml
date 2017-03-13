@@ -1,6 +1,6 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.incyteJakafi.ashPort" version="1.0.0">
-  <name>Incyte Portfolio</name>
-  <description>Incyte Portfolio</description>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.3fxpdf" version="1.0.0">
+  <name>3FX PDF</name>
+  <description>3FX PDF</description>
   <author>3fx</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
