@@ -1,0 +1,769 @@
+
+@font-face {
+  font-family: 'HelveticaLTStd-Light';
+  src: url('../fonts/HelveticaLTStd-Light.otf') format('opentype'),
+       url('../fonts/HelveticaLTStd-Light.woff2') format('woff2'), 
+       url('../fonts/HelveticaLTStd-Light.woff') format('woff'), 
+       url('../fonts/HelveticaLTStd-Light.ttf')  format('truetype'); 
+}
+
+/****************** ASHE ******************/
+html,
+body {
+    padding: 0;
+    max-width: 100%;
+    min-width: 768px;
+    max-height: 1080px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    font-family: "HelveticaLTStd-Light", Helvetica, Arial, sans-serif; 
+    font-weight: 300;
+    /*overflow: hidden;*/
+}
+
+.pages {
+    max-width: 1920px;
+    min-width: 768px;
+    min-height: 768px;
+    max-height: 1080px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.start-screen {
+    position: absolute;
+    max-height: 1080px;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.absolute-center {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+/*    width: 100%;
+*/}
+
+.blue-text {
+  color: #006699;
+}
+
+.liaison-box {
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  right: 0;
+  padding: 0px 4%;
+}
+
+.liaison-box h6 {
+  font-size: 19px;
+}
+
+.incyte-ref {
+        padding-left: 45px;
+}
+.incyte-ref h6 {
+        margin-top: 0;
+        padding-top: 10px;
+        position: absolute;
+}
+
+.tiny-text {
+  font-size: 15px;
+}
+
+/* START SCREEN */
+.start-screen div.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div.start-screen .col-xs-6.text-center {
+  width: 49%;
+}
+div.start-screen div.container div.row div {
+    background: rgba(255, 255, 255, 0.5);
+    /*border: 2px solid rgba(255, 255, 255, 0.3);*/
+    margin: 1px 1px 0 0;
+}
+div.start-screen div.container div.row div:nth-child(3) {
+    border: 0;
+}
+div.start-screen div.container div.row div:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+div.start-screen div.container div.row div {
+    padding: 5% 0;
+}
+
+.start-screen div.container h1 {
+    color: #006699;
+    margin: 0 0 20px;
+}
+.start-screen div.container h2 {
+    color: #84c0c2;
+    margin: 10px 0 0;
+}
+.discover {
+    border-top-left-radius: 20px;
+}
+.portfolio {
+    border-top-right-radius: 20px;
+}
+.develop {
+    border-bottom-left-radius: 20px;
+}
+.incyte {
+    border-bottom-right-radius: 20px;
+}
+
+.data-video-wrapper {
+  position: relative;
+}
+.data-video-overlay img {
+        position: absolute;
+        top: 50%;
+        left: 505;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 99999999999999;
+}
+.data-video-overlay {
+        height: 100%;
+        width: 100%;
+/*        background: rgba(0, 0, 0, 1);
+*/        position: absolute;
+}
+
+/* PORTFOLIO */
+.portfolio-wrapper {
+  background: rgba(255, 255, 255, .85);
+  border-radius: 20px;
+  margin: 10px 34px;
+  padding: 15px;
+  position: relative;
+}
+
+/* PROGRESS BAR CSS */
+      progress {
+          -webkit-appearance: none;
+          appearance: none;
+        background-color: #eee;
+        border: 0;
+        height: 15px;
+        border-radius: 9px;
+        width: 80%;
+        vertical-align: top;
+          margin-top: 16px;
+      }
+      #progressbar6 {
+        width: 95%;
+      }
+
+      progress[value]::-webkit-progressbar2 {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+
+      progress[value]::-webkit-progress-value {
+        background-image:
+             -webkit-linear-gradient(-45deg, 
+                                     transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                     rgba(0,0, 0, .1) 66%, transparent 66%),
+             -webkit-linear-gradient(top, 
+                                     rgba(255, 255, 255, .25), 
+                                     rgba(0, 0, 0, .25)),
+             -webkit-linear-gradient(left, #09c, #f44);
+
+          border-radius: 2px; 
+          background-size: 35px 20px, 100% 100%, 100% 100%;
+      }
+
+      @-webkit-keyframes animate-stripes {
+         100% { background-position: -100px 0px; }
+      }
+
+      @keyframes animate-stripes {
+         100% { background-position: -100px 0px; }
+      }
+
+      progress[value]::-webkit-progress-value::before {
+        content: '80%';
+        position: absolute;
+        right: 0;
+        top: -125%;
+      }
+
+      progress[value]::-webkit-progress-value::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        border-radius: 100%;
+        right: 7px;
+        top: 7px;
+        background-color: white;
+      }
+
+      progress[value] {
+        /* Reset the default appearance */
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        
+        /* Get rid of default border in Firefox. */
+        border: none;
+        
+        /* Dimensions */
+        width: 80%;
+        height: 20px;
+      }
+
+      progress[value]#progressbar6 {
+        width: 95%;
+      }
+
+      progress[value]::-moz-progressbar2 { 
+        background-image:
+          -moz-linear-gradient(
+            135deg, 
+            transparent 33%, 
+            rgba(0, 0, 0, 0.1) 33%, 
+            rgba(0, 0, 0, 0.1) 66%, 
+            transparent 66% 
+          ),
+          -moz-linear-gradient(
+            top, 
+            rgba(255, 255, 255, 0.25), 
+            rgba(0, 0, 0, 0.25)
+          ),
+          -moz-linear-gradient(
+            left, 
+            #09c, 
+            #f44
+          );
+
+        border-radius: 2px; 
+        background-size: 35px 20px, 100% 100%, 100% 100%; 
+      }
+
+      progress[value]  {
+        /* Reset the default appearance */
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        /* Get rid of default border in Firefox. */
+        border: none;
+        /* Dimensions */
+        width: 80%;
+        height: 15px;
+        /* For IE10 */
+        color: blue; 
+      }
+
+      .progressbar2 {
+        background-color: whiteSmoke;
+        border-radius: 2px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+        width: 80%;
+        height: 15px;
+        position: relative;
+        display: block;
+      }
+        
+      .progressbar2 > span {
+        background-color: blue;
+        border-radius: 2px;
+        display: block;
+        text-indent: -9999px;
+      }
+
+      .progress-full progress {
+        width: 100%;
+      }
+      .progress-full progress[value]::-webkit-progress-value::before {
+        content: '100%';
+      }
+      .progress-full progress[value] {
+        width: 100%;
+      }
+      .progress-full .progressbar2 {
+        width: 100%;
+      }
+/* end progress bar */
+
+.discover-view .fa {
+    color: #006699;
+}
+
+.goback-btn {
+        z-index: 9998;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        left: 115px;
+}
+/*********************
+DEVELOP
+*********************/
+.develop-view {
+  background: url('../images/ashe-2016-develop-start-screen.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.develop-view .container {
+  background: rgba(255, 255, 255, .6);
+  border-radius: 20px;
+  color: #006699;
+  padding: 5%;
+}
+  .develop-view .container hr {
+    border-color: #11689b;
+    color: #11689b;
+    height: 1px;
+    width: 75%;
+  }
+  .develop-view .container h1 {
+    font-size: 125px;
+    font-weight: 700;
+  }
+  .develop-view .container h3 {
+    font-size: 38px;
+  }
+
+    /* DEVELOP HOME SCREEN */
+    .develop-home {
+      color: #11689b;
+    }
+    .develop-home h1,
+    .portfolio-view h1 {
+      font-size: 40px;
+      padding-top: 65px;      
+      text-transform: uppercase;
+    }
+    .portfolio-view h1 {
+      padding-top: 40px;      
+    }
+    .develop-home .well {
+      border-radius: 20px;
+      color: #11689b;
+      font-size: 26px;
+      padding: 5% 0;
+    }
+    .develop-home .well:hover {
+      background: #2078a0;
+      border-color: #2078a0;
+      color: #fff;
+    }
+    .develop-home hr {
+      display: inline-block;
+      width: 15%;
+      border-color: #11689b;
+      color: #11689b;
+      height: 1px;
+      vertical-align: middle;
+      margin-top: -3px;
+    }
+
+    .develop-home p {
+      display: inline-block;
+      font-size: 40px;
+      margin: 60px 20px 40px;
+    }
+    .develop-home.study-home-a .well,
+    .develop-home.study-home-b .well {
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 991px) {
+      br.hide991 { display: none; }
+    }
+
+
+    /* DISEASE STATE A */
+
+    .disease-state-a .container-fluid.absolute-bottom {
+      font-size: 20px;
+      position: absolute;
+        bottom: 15px;
+      text-transform: uppercase;
+      width: 100%;  
+    }
+    .disease-state-a p.well {
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+      color: rgba(32, 120, 160, .85);
+      padding: 35px;
+    }
+    .disease-state-a p.well.bg-blue,
+    .container-fluid.sd-main .col-xs-12.bg-blue {
+      background: rgba(32, 120, 160, .85);
+      border: none;
+      color: #fff;
+    }
+
+#my-popover {
+    left: -169px!important;
+}
+
+#my-popover .arrow {
+    left: 90% !important;
+}
+
+.pop-up-div {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        color: #2078a0;
+        display: none;
+        padding: 1%;
+        position: absolute;
+          bottom: 25%;
+          right: 5%;
+            width: 45%;
+}
+
+.pop-up-div.studydesign {
+        bottom: 15%;
+        right: 9%;
+        z-index: 9999999998;
+}
+
+.pop-up-div ol {
+  padding-left: 12px;
+}
+
+.container-fluid.sd-main {
+    margin: 0 10%;
+    padding-top: 65px;
+}
+.container-fluid.sd-main h2 {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.sd-main h4 {
+  width: 100%
+}
+
+.container-fluid.sd-main .col-xs-3 {
+  padding-right: 1px;
+  }
+  .container-fluid.sd-main .col-xs-12 {
+       background: rgba(255, 255, 255, .85);
+       padding: 25% 0;
+       margin-bottom: 1px;
+       min-height: 200px;
+}
+   .container-fluid.sd-main .col-xs-12:nth-child(1) {
+       border-top-left-radius: 20px;
+  }
+   .container-fluid.sd-main .col-xs-12:nth-child(3) {
+       border-bottom-left-radius: 20px;
+       margin-bottom: 0;
+  }
+
+  .container-fluid.sd-main .col-xs-9 {
+    background: rgba(255, 255, 255, .85);
+    border-radius: 0px 20px 20px 0;
+    max-height: 602px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sd-main {
+    color: #006699;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+  .sd-main-content {
+    margin-left: 20px;
+    padding-right: 100px;
+    width: 108%;
+  }
+
+  .sd-main h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sd-main .chevron-container {
+      text-align: center;
+          position: absolute;
+          right: 0;
+          left: 0;
+  }
+    .sd-main .chevron-container.top {     
+      text-align: center;
+          position: absolute;
+          top: 10px;
+        }
+
+  .sd-main .chevron-container.btm {     
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      z-index: 999999999999;
+    }
+
+
+.sd-main .sd-main-content {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 455px;
+    margin: 50px 0 97px;
+}
+
+.portofolio-purple, .portofolio-purple a {
+  color: rgb(28,19,94);
+}
+.portofolio-redish, .portofolio-redish a {
+  color: rgb(101,3,68);
+}
+.portofolio-blue, .portofolio-blue a {
+  color: rgb(0, 134, 188);
+}
+
+
+.scroll-wrapper {
+    max-height: 500px;
+}
+
+/* new portfolio css */
+.portfolio-top-nav {
+        font: 700 14px Helvetica, Arial, sans-serif;
+        position: absolute;
+        top: -25px;
+/*        width: 100%;
+*/}
+
+
+.portfolio-top-nav.one {
+        left: 293px;
+}
+.portfolio-top-nav.two {
+        left: 55%;
+        margin-left: 8px;
+}
+.portfolio-top-nav.three {
+        left: 78%;
+}
+.portfolio-top-nav.four {
+        left: 89%;
+}
+
+li.last {
+  position: absolute;
+    top: 0;
+    left: 89%;
+}
+
+/* PORTFOLIO POP-UP UPDATES */
+.data-link-wrapper {
+  display: inline-block;
+  overflow-y: auto;
+  vertical-align: top;
+  width: 40%;
+  max-height: 478px;
+  padding-right: 10px;
+}
+
+.data-video-wrapper {
+  display: inline-block;
+  float: right;
+  width: 58%;
+}
+
+.data-video-wrapper video {
+  width: 100%;
+}
+
+/* SURFACE */
+@media (max-width: 1440px) {
+  /* LANDSCAPE:
+  Windows Surface Pro*/
+  .container-fluid.sd-main h2 {
+    margin-bottom: 9px;
+  }  
+
+  .container-fluid.sd-main .col-xs-9 {
+    max-height: 530px;
+  }
+  .sd-main .sd-main-content {
+    max-height: 384px;
+  }
+  .liaison-box h6 {
+        font-size: 16px;
+}
+  .container-fluid.sd-main .col-xs-12 {
+     min-height: 176px;
+  }
+
+  /* PORTFOLIO */
+    .targeted-therapies-container {
+      margin-top: 15px;
+  }
+
+  div.progress {
+      height: 23px;
+      margin: 0 0 4px;
+  }
+  .targeted-therapies-container div.col-xs-2 {
+      height: 293px;
+  }
+  .immuno-therapies-container div.col-xs-2 {
+      height: 131px;
+  }
+  .non-oncology-container div.col-xs-2 {
+      height: 23px;
+  }
+  .partnered-container div.col-xs-2 {
+      height: 77px;
+  }
+  .portfolio-view .col-xs-2 h3 {
+      font-size: 18px;
+  }
+  .targeted-therapies-container li, .immuno-therapies-container li, .non-oncology-container li, .partnered-container li {
+        font-size: 15px;
+        line-height: 18px;
+        margin-top: 4px;
+        width: 170px;
+  }
+  .ipadH3 {
+    font-size: 20px;
+  }
+  .iPad-tiny-text {
+    font-size: 11px;
+      line-height: 12px;
+  }
+  .portfolio-top-nav {
+        font: 700 11px Helvetica, Arial, sans-serif;
+        top: -20px;
+  }
+.portfolio-top-nav.two {
+        left: 52%;
+}
+  .divider-line-one, .divider-line-two, .divider-line-three {
+        height: 565px;
+  }
+  div.progress-bar:after
+   {
+        border-width: 12px !important;
+  }
+  .discover-text {
+    height: 60%;
+  }
+}
+
+/* IPAD STYLES */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+  br.showDTOnly {
+    display: none;
+  }
+  .targeted-therapies-container {
+      margin-top: 15px;
+  }
+
+  div.progress {
+      height: 23px;
+      margin: 0 0 4px;
+  }
+  .targeted-therapies-container div.col-xs-2 {
+      height: 293px;
+  }
+  .immuno-therapies-container div.col-xs-2 {
+      height: 131px;
+  }
+  .non-oncology-container div.col-xs-2 {
+      height: 23px;
+  }
+  .partnered-container div.col-xs-2 {
+      height: 77px;
+  }
+  .portfolio-view .col-xs-2 h3 {
+      font-size: 18px;
+  }
+  .targeted-therapies-container li, .immuno-therapies-container li, .non-oncology-container li, .partnered-container li {
+        font-size: 13px;
+        line-height: 16px;
+        margin-top: 7px;
+        width: 170px;
+        margin-left: -7px;
+  }
+  .portfolio-top-nav.one {
+        left: 239px;
+}
+  .ipadH3 {
+    font-size: 20px;
+  }
+  .iPad-tiny-text {
+    font-size: 11px;
+      line-height: 12px;
+  }
+  .portfolio-top-nav {
+        font: 700 11px Helvetica, Arial, sans-serif;
+        top: -20px;
+  }
+
+  .divider-line-one, .divider-line-two, .divider-line-three {
+        height: 540px;
+  }
+  div.progress-bar:after
+   {
+        border-width: 12px !important;
+  }
+  .disease-state-a .container-fluid.absolute-bottom {
+    font-size: 14px;
+    bottom: -17px;
+  }
+  .container-fluid.sd-main {
+    margin: 0;
+  }
+  .container-fluid.sd-main h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .container-fluid.sd-main .col-xs-12 {
+    min-height: 185px;
+  }
+  .container-fluid.sd-main .col-xs-9 {
+    max-height: 557px;
+    width: 73%;
+  }
+  .sd-main .sd-main-content {
+    max-height: 410px;
+  }
+  .col-xs-9.primary-obj .liaison-box {
+        padding: 0 14%;
+  }
+
+  .targeted-therapies-container li:nth-child(2), .immuno-therapies-container li:nth-child(2), .non-oncology-container li:nth-child(2), .partnered-container li:nth-child(2) {
+        width: 95px;
+        margin-left: -30px;
+  }
+  .targeted-therapies-container li:nth-child(3), .immuno-therapies-container li:nth-child(3), .non-oncology-container li:nth-child(3), .partnered-container li:nth-child(3) {
+        margin-left: -15px;
+  }
+
+
+}
